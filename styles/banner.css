@@ -1,0 +1,66 @@
+ .banner {
+    background: var(--azul-degrade); /*Cor de fundo*/
+    color: var(--branco); /*Cor do texto*/
+    text-align: center; /*Alinhar o texto*/
+    padding: 2.5em 2em; /*padding cria espaçamento interno do txt até a borda*/
+    /* as medidas "em" sigifica que é o valor x vezes o tamanho da fonte*/
+}
+
+.banner__titulo {
+    font-size: 18px; /*Tamanho da fonte */
+    font-weight: 700; /*Expessura da fonte*/
+}
+
+.banner__texto {
+    font-weight: 500; /*Expessura da fonte*/
+    margin: 1em 0; /*Espaçamento*/
+} 
+
+.banner__pesquisa {
+    background-color: transparent; /*Cor de fundo*/
+    border: 1px solid var(--branco);  /*especificações da borda(tamanho1px, tipo solid e a cor branca)*/
+    color: var(--branco); /*Cor do texto*/
+    border-radius: 24px; /*Tamanho da borda*/
+    width: 100%; /*tamanho*/
+    padding: 1em; /*padding cria espaçamento interno do txt até a borda*/
+    /* as medidas "em" sigifica que é o valor x vezes o tamanho da fonte*/
+    
+}
+
+.banner__pesquisa::placeholder {
+    font-family: var(--fonte-principal);
+    font-size: 14px; /*Tamanho da fonte */
+    font-weight: 400; /*Expessura da fonte*/
+    text-align: center;  /*Alinhar o texto*/
+    color: var(--branco); /*Cor do texto*/
+    background: url("../img/Lupa.svg") no-repeat; /*colocar imagem junto ao texto*/
+    background-position: 1em; /*posição da lupa*/
+}
+
+@media screen and (min-width: 1024px) {
+    .banner__titulo {
+        font-size: 36px;
+    }
+
+    .banner__pesquisa {
+        width: 50%;
+    }
+
+    .banner__pesquisa::placeholder {
+        background-position: 7em;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .banner__pesquisa {
+        width: 35%;
+    }
+
+    .banner__pesquisa::placeholder {
+        background-position: 10em;
+    }
+
+    .banner {
+        padding: 6em 0;
+    }
+}

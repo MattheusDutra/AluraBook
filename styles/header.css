@@ -1,0 +1,181 @@
+.cabeçalho__menu-hamburguer {
+    width: 24px;  /*Largura*/
+    height: 24px; /*Altura*/
+    background-image: url("../img/Menu.svg"); /*Img de fundo/ url é para colocar o diretório da img*/
+    background-repeat: no-repeat;
+    background-position: center; /*Definir posição dentro do background*/
+    display: inline-block;  /*display é para indicar a forma como os elementos HTML serão dispostos na página/espaços delimitados*/
+}
+
+/*Para ficar com o icone azul quando clicar*/
+.container__botao:checked~ .container__rotulo > .cabeçalho__menu-hamburguer{
+    background-image: url("../img/Menu\ Aberto.svg");
+}
+
+.container__botao:checked~ .container__rotulo{
+    background: var(--azul-degrade);
+}
+
+.cabeçalho {
+    background-color: var(--branco); /*Cor de fundo*/
+    display: flex; /*display é para indicar a forma como os elementos HTML serão dispostos na página/espaços delimitados*/
+    justify-content: space-between; /*Justificar a posição do conteúdo*/
+    align-items: center; /*Para alinhar itens*/
+    position: relative; /*permite colocar outros atributos de top,left, buttom */
+}
+
+.container {
+    display: flex;
+    align-items: center; /*Para alinhar itens*/
+}
+
+.container__imagem {
+    padding: 1em; /*padding cria espaçamento interno do txt até a borda*/
+    /* as medidas "em" sigifica que é o valor x vezes o tamanho da fonte*/
+}
+
+.lista-menu {
+    display: none; /*para remover a lista mas sem apagala*/
+    position: absolute; /*permite movimentar o elemento de acordo com o elemento pai e que tenha a position diferente da padrão*/
+    top: 100%; /*tirou 100% do cabecalho e ficou abaixo*/
+    width: 60vw; /*Largura*/
+}
+
+.container__botao:checked~.lista-menu {
+    /* checked detecta se esta preenchido o checkbox e o ~ procura outro elemento que vem em seguida */
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    background-color: var(--branco); /*Cor de fundo*/
+    padding: 1em;  /*padding cria espaçamento interno do txt até a borda*/
+    /* as medidas "em" sigifica que é o valor x vezes o tamanho da fonte*/
+}
+
+.lista-menu__titulo {
+    color: var(--laranja); /*Cor do texto*/
+    font-weight: 700; /*Expessura da fonte*/
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade); /*Cor de fundo*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase; /*Deixa as letras em maiúsculo*/
+}
+
+.container__botao {
+    display: none; /* para nao aparecer no layout mobile*/
+}
+
+.container__titulo {
+    display: none; /* para nao aparecer no layout mobile*/
+}
+
+.opções {
+    display: none; /* para nao aparecer no layout mobile*/
+}
+
+.container__texto{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--fonte-secundario);
+        font-size: 30px; /*Tamanho da fonte*/
+    }
+
+    .container__titulo {
+        font-weight: 400; /*Expessura da fonte*/
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700; /*Expessura da fonte*/
+    }
+
+    .opções {
+        display: flex;
+    }
+
+    .opções__item {
+        text-transform: uppercase; /*Deixa as letras em maiúsculo*/
+        padding: 0 1em; /*padding cria espaçamento interno do txt até a borda*/
+        /* as medidas "em" sigifica que é o valor x vezes o tamanho da fonte*/
+    }
+
+    .opções__link {
+        text-decoration: none; /*Remove a decoração padrão*/
+        color: var(--preto); /*Cor do texto*/
+    }
+
+    .container__imagem-transparente {
+        display: none; /* para nao aparecer no layout mobile*/
+    }
+
+    .cabeçalho__menu-hamburguer {
+        display: none; /* para nao aparecer no layout mobile*/
+    }
+
+    .opções__botão:checked~.lista-menu {
+        display: block;
+        width: auto; /*Largura*/
+    }
+
+    .opções__botão {
+        display: none; /* para nao aparecer no layout mobile*/
+    } 
+
+    /*Para ficar com o icone azul quando clicar*/
+    .opções__botão:checked~.opções__rotulo>.opções__item{
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    /*Para a cor azul ocupar todo espaço*/
+    .opções__item{
+        padding: 2em 1em;
+    }
+
+    /*Para os itens da lista ficarem azul quando passar por cima*/
+    .lista-menu__item:hover{
+        background: var(--azul-degrade);
+    }
+
+    /*Para a fonte da lista ficar branca quando passar*/
+    .lista-menu__item:hover> .lista-menu__link{
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
+    .container__texto{
+        display: none;
+    }
+
+} 
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabeçalho {
+        padding: 0 2em;
+    }
+
+    .opções {
+        margin-right: auto;
+    }
+
+    .container__texto {
+        display: block;
+    }
+}

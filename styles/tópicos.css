@@ -1,0 +1,67 @@
+  .tópicos {
+    background: var(--azul-degrade); /*cor de fundo*/
+    text-align: center; /*alinhar o texto*/
+    padding: 1em 0; /*padding cria espaçamento interno do txt até a borda*/
+    /* as medidas "em" sigifica que é o valor x vezes o tamanho da fonte*/
+}
+
+.tópicos__titulo {
+    color: var(--branco); /*cor texto*/
+    font-weight: 300;  /*expessura*/
+    margin-bottom: 1em;  /*Espaçamento*/
+}
+
+.tópicos__lista {
+    display: flex;
+    flex-wrap: wrap; /*pra fazer a quebra de linha*/
+    justify-content: center; /*Justificar conteúdo*/
+}
+
+.tópicos__item {
+    margin: 2em 0.5em;  /*Espaçamento, 1 valor horizontal e 2 valor na vertical*/
+}
+
+.tópicos__link {
+    color: var(--branco); /*Cor do texto*/
+    background-color: var(--laranja); /*Cor de fundo*/
+    text-decoration: none; /*Tirar a decoração padrão*/
+    font-size: 14px; /*Tamanho da fonte*/
+    font-weight: 700; /*Expessura da fonte*/
+    padding: 1em; /*padding cria espaçamento interno do txt até a borda*/
+    /* as medidas "em" sigifica que é o valor x vezes o tamanho da fonte*/
+}
+
+    /*Ao passar o mouse em cada item da lista ele inverter as cores, a fonte virar laranja e o fundo branco. */
+.tópicos__link:hover {
+    color: var(--laranja);
+    background-color: var(--branco);
+    }
+
+
+@media screen and (min-width: 1024px) {
+    .tópicos__titulo {
+        font-size: 24px; /*Tamanho da fonte*/
+    }
+
+    .tópicos__link {
+        font-size: 24px; /*Tamanho da fonte*/
+    }
+
+     /*Ao passar o mouse em cada item da lista ele inverter as cores, a fonte virar laranja e o fundo branco. */
+    .tópicos__link:hover {
+        color: var(--laranja);
+        background-color: var(--branco);
+        }
+}
+
+@media screen and (min-width: 1728px){
+    .tópicos{
+        padding: 3em 30vw;
+    }
+
+    /*Ao passar o mouse em cada item da lista ele inverter as cores, a fonte virar laranja e o fundo branco. */
+    .tópicos__link:hover {
+        color: var(--laranja);
+        background-color: var(--branco);
+        }
+}

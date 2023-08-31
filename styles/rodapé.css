@@ -1,0 +1,73 @@
+hr {
+    margin: 0;
+}
+
+.rodapé {
+    background-color: var(--branco); /*Cor de fundo*/
+    text-align: center; /*posição do texto*/
+    padding: 1em; /*padding cria espaçamento interno do txt até a borda*/
+    /* as medidas "em" sigifica que é o valor x vezes o tamanho da fonte*/
+}
+
+ /* cor ao passar o mouse nos links do footer*/
+ .lista-rodapé__link:hover {
+    color: var(--laranja);
+    }
+
+.lista-rodapé {
+    display: none; /*remover as setas*/
+}
+
+@media screen and (min-width: 1024px) {
+    .rodapé {
+        display: flex;
+        justify-content: space-around; /*Justificar Conteúdo*/
+    }
+
+    .lista-rodapé {
+        display: block;
+    }
+
+    .lista-rodapé__item {
+        display: flex;
+        align-items: center; /*Alinhar itens*/
+        margin: 0.6em 0; /*Espaçamento, 1 valor horizontal e 2 valor na vertical*/
+    }
+
+    .lista-rodapé__link {
+        color: var(--cinza); /*Cor de texto*/
+        text-decoration: none; /*Tirar a decoração padrão*/
+        margin-left: 0.6em; /*Espaçamento*/
+    }
+
+        /* cor ao passar o mouse nos links do footer*/
+    .lista-rodapé__link:hover {
+        color: var(--laranja);
+        }
+
+    .lista-rodapé__titulo {
+        font-size: 14px; /*Tamanho da fonte*/
+        color: var(--cinza-claro); /*Cor da fonte*/
+    }
+
+    .rodapé__titulo {
+        font-size: 24px; /*Tamanho da fonte*/
+    }
+}
+
+
+@media screen and (min-width: 1728px) {
+    .lista-rodapé {
+        border-left: 1px solid var(--cinza-claro);
+        padding-left: 1em;
+    }
+
+    .rodapé {
+        padding: 3em 0;
+    }
+
+     /* cor ao passar o mouse nos links do footer*/
+     .lista-rodapé__link:hover {
+        color: var(--laranja);
+        }
+}
